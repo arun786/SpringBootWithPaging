@@ -1,5 +1,6 @@
 package com.arun.service;
 
+import com.arun.model.Employee;
 import org.springframework.data.domain.Pageable;
 
 import java.util.List;
@@ -9,5 +10,5 @@ import java.util.List;
  */
 public interface PaginationService {
 
-    public List<String> getAllEmployee(Pageable pageable, String name);
+    public List<Employee> getAllEmployee(Pageable pageable, String name);
 }
