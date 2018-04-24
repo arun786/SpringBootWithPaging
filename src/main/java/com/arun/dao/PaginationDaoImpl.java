@@ -21,7 +21,7 @@ public class PaginationDaoImpl implements PaginationDao {
 
     @Override
     public List<Employee> getAllEmployee(Pageable pageable, String name) {
-        List<Employee> employees = jdbcTemplate.query(sql, new Object[]{name, pageable.getPageNumber()}, new EmployeeMapper());
+        List<Employee> employees = jdbcTemplate.query(sql, new Object[]{name}, new EmployeeMapper());
         return employees;
     }
 }
