@@ -25,6 +25,7 @@ public class PaginationController {
         List<Employee> employees = paginationService.getAllEmployee(pageable, name);
         PagedListHolder<Employee> employeeList = new PagedListHolder<>(employees);
         //employeeList.setPageSize(2);
+        employeeList.setPageSize(15);
         employeeList.setPage(pageable.getPageNumber());
         //employeeList.setPage(pageable.getPageNumber());
         //int page = employeeList.getPage();
